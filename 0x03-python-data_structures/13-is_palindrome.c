@@ -27,7 +27,7 @@ int is_palindrome(listint_t **head)
 	if (!arry)
 		return (0);
 
-	while(check != NULL)
+	while (check != NULL)
 	{
 		arry[i] = check->n;
 		check = check->next;
