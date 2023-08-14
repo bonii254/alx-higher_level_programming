@@ -7,5 +7,4 @@ def add_tuple(tuple_a=(), tuple_b=()):
 
     sum_first = a[0] + b[0]
     sum_second = a[1] + b[1]
-    
     return sum_first, sum_second
