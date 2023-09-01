@@ -1,17 +1,24 @@
 #!/usr/bin/python3
 
+"""Defines a class called square"""
+
 
 class Square:
     """define class square
+
     Attributes:
         __size (int): length of square object
     """
+
     def __init__(self, size=0):
         """Initialize a square.
+
         Args:
             size (int): len of square
+
         Returns:
             none
+
         Raises:
             Typerror: if size type is not int
             ValueError: if size >= 0.
