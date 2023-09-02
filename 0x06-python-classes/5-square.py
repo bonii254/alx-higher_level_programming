@@ -53,7 +53,11 @@ class Square:
         Returns:
             none.
         """
-        for _ in range(self.__size):
+        if (self.__size == 0):
+            print()
+        
+        else:
             for _ in range(self.__size):
-                print("#", end="")
-            print("")
+                for _ in range(self.__size):
+                    print("#", end="")
+                print("")
