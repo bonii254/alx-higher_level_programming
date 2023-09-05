@@ -1,0 +1,42 @@
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+>>> text = "This is a test. It should split the text. Let's see if it works."
+>>> text_indentation(text)
+This is a test.
+<BLANKLINE>
+It should split the text.
+<BLANKLINE>
+Let's see if it works.
+<BLANKLINE>
+>>> text = "First paragraph. Second paragraph? Third paragraph: Fourth paragraph."
+>>> text_indentation(text)
+First paragraph.
+<BLANKLINE>
+Second paragraph?
+<BLANKLINE>
+Third paragraph:
+<BLANKLINE>
+Fourth paragraph.
+<BLANKLINE>
+>>> text = "This is...  a test? What about this:    spacing."
+>>> text_indentation(text)
+This is.
+<BLANKLINE>
+.
+<BLANKLINE>
+.
+<BLANKLINE>
+a test?
+<BLANKLINE>
+What about this:
+<BLANKLINE>
+spacing.
+<BLANKLINE>
+>>> text = "   Leading spaces should not be preserved."
+>>> text_indentation(text)
+Leading spaces should not be preserved.
+<BLANKLINE>
+>>> text = 78
+>>> text_indentation(text)
+Traceback (most recent call last):
+...
+TypeError: text must be a string
