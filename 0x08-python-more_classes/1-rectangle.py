@@ -1,12 +1,22 @@
 #!/usr/bin/python3
+"""Defines a rectangle class."""
 
 
 class Rectangle:
     """This class defines a rectangle with customizable width and height
         attributes.
-        Args:
+        Attributes:
             width (int): The width of the rectangle.
             height (int): The height of the rectangle.
+        Methods:
+            width(self):
+                Get the width of the rectangle.
+            width(self, value):
+                Set the width of the rectangle
+            height(self):
+                Get the height of the rectangle.
+            height(self, value):
+                Set the height of the rectangle.
         Raises:
             TypeError: If width or height is not an integer.
             ValueError: If width or height is less than 0.
@@ -24,7 +34,13 @@ class Rectangle:
 
     @width.setter
     def width(self, value):
-        """Set the width of the rectangle."""
+        """Set the width of the rectangle.
+        Args:
+            value (int): The new width value.
+        Raises:
+            TypeError: If the value is not an integer.
+            ValueError: If the value is less than 0.
+        """
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
         if value < 0:
@@ -38,7 +54,13 @@ class Rectangle:
 
     @height.setter
     def height(self, value):
-        """Set the height of the rectangle."""
+        """Set the height of the rectangle.
+        Args:
+            value (int): The new height value.
+        Raises:
+            TypeError: If the value is not an integer.
+             ValueError: If the value is less than 0.
+        """
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
         if value < 0:
