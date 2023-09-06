@@ -23,14 +23,18 @@ class Rectangle:
     """
 
     def __init__(self, width=0, height=0):
-        """Initialize a Rectangle with optional width and height."""
+        """Initialize a Rectangle with optional width and height.
+        Args:
+            width (int): Width of the new rectangle
+            height (int): Height of new rectangle
+        """
         self.__width = width
         self.__height = height
 
     @property
     def width(self):
         """Get the width of the rectangle.
-        Returns (int): value in self.__width 
+        Returns (int): value in self.__width
         """
         return self.__width
 
