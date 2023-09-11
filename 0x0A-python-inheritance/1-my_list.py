@@ -5,6 +5,6 @@
 class MyList(list):
     """Returns elements present in the list"""
     def print_sorted(self):
-        """Returns My_list elements in acending order"""
+        """prints My_list elements in acending order"""
         sorted_val = sorted(self)
         print("{}".format(sorted_val))
