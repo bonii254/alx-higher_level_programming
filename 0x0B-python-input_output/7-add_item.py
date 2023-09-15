@@ -1,15 +1,12 @@
 #!/usr/bin/python3
-"""Sript that adds all args to a python list & saves them to a file"""
-import json
+"""adds all arguments to a Python list, and then save them to a file"""
 import sys
-
+import json
 
 load_from_json_file = __import__("6-load_from_json_file").load_from_json_file
 save_to_json_file = __import__("5-save_to_json_file").save_to_json_file
 
-my_obj = sys.argv
-curr_list = [item for item in my_obj]
-
+arg_list = sys.argv[1:]
 filename = "add_item.json"
 try:
     prev_list = load_from_json_file(filename)
@@ -18,5 +15,5 @@ except FileNotFoundError:
 
 new_list = []
 if type(prev_list) is list:
-    new_list = prev_list + curr_list[1:]
+    new_list = prev_list + arg_list
 save_to_json_file(new_list, filename)
