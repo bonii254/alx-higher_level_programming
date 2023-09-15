@@ -3,12 +3,12 @@
 characters written"""
 
 
-def write_file(filename="", text=""):
+def append_write(filename="", text=""):
     """ Returns appended text
     args
         filename: name of file
         text: text to be appended
     """
-    with open(text, mode='a', encoding='utf8') as wf:
+    with open(filename, mode='a', encoding='utf8') as wf:
         size = wf.write(text)
         return size
