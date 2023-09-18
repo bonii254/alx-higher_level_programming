@@ -8,6 +8,7 @@ import unittest
 from models.base import Base
 from models.rectangle import Rectangle
 
+
 class TestRectangle_Class(unittest.TestCase):
     def test_new_rect_instance(self):
         r = Rectangle(2, 6)
@@ -59,6 +60,7 @@ class TestRectangle_Class(unittest.TestCase):
         expected_dict = {'id': 100, 'width': 5, 'height': 10, 'x': 2, 'y': 3}
         self.assertDictEqual(r.to_dictionary(), expected_dict)
 
+
 class TestRectangle_stdout(unittest.TestCase):
     @staticmethod
     def capture_stdout(rect, method):
@@ -67,7 +69,7 @@ class TestRectangle_stdout(unittest.TestCase):
             rect (Rectangle): The Rectangle to print to stdout.
             method (str): The method to run on rect.
         Returns:
-            The text printed to stdout by calling method 
+            The text printed to stdout by calling method
         """
         capture = io.StringIO()
         sys.stdout = capture
@@ -83,7 +85,7 @@ class TestRectangle_stdout(unittest.TestCase):
         capture = TestRectangle_stdout.capture_stdout(r, "print")
         correct = "[Rectangle] ({}) 0/0 - 4/6\n".format(r.id)
         self.assertEqual(correct, capture.getvalue())
- 
+
     def test_display_width_height(self):
         r = Rectangle(2, 3, 0, 0, 0)
         capture = TestRectangle_stdout.capture_stdout(r, "display")

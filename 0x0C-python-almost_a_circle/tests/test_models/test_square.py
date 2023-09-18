@@ -7,11 +7,12 @@ import unittest
 from models.base import Base
 from models.square import Square
 
+
 class TestSquare(unittest.TestCase):
 
     def test_is_base(self):
         self.assertIsInstance(Square(10), Base)
-    
+
     def test_is_rectangle(self):
         self.assertIsInstance(Square(10), Square)
 
@@ -26,7 +27,7 @@ class TestSquare(unittest.TestCase):
     def test_str_size(self):
         with self.assertRaisesRegex(TypeError, "width must be an integer"):
             Square("invalid")
-    
+
     def test_float_size(self):
         with self.assertRaisesRegex(TypeError, "width must be an integer"):
             Square(5.5)
@@ -56,6 +57,7 @@ class TestSquare(unittest.TestCase):
         s = Square(10, 2, 1, 1)
         correct = {'id': 1, 'x': 2, 'size': 10, 'y': 1}
         self.assertDictEqual(correct, s.to_dictionary())
+
 
 class TestSquare_stdout(unittest.TestCase):
     @staticmethod
@@ -87,6 +89,6 @@ class TestSquare_stdout(unittest.TestCase):
         capture = TestSquare_stdout.capture_stdout(s, "display")
         self.assertEqual("##\n##\n", capture.getvalue())
 
+
 if __name__ == "__main__":
     unittest.main()
-

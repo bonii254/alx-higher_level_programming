@@ -10,12 +10,12 @@ class Rectangle(Base):
         height (int): height of rectangle
         x (int):
         y (int)
-	id (int): instance id
+        id (int): instance id
 
     Raises:
         TypeError: <name of the attribute> must be an integer
-	valueError: <name of the attribute> must be >= 0(for x and y)
-	ValueError: <name of the attribute> must be > 0
+        valueError: <name of the attribute> must be >= 0(for x and y)
+        ValueError: <name of the attribute> must be > 0
     """
 
     def __init__(self, width, height, x=0, y=0, id=None):
@@ -109,20 +109,20 @@ class Rectangle(Base):
         if args and len(args) != 0:
             argc = 0
             for arg in args:
-                 if argc == 0:
-                     if arg is None:
-                         self.__init__(self.width, self.height, self.x, self.y)
-                     else:
-                         self.id = arg
-                 elif argc == 1:
-                     self.width = arg
-                 elif argc == 2:
-                     self.__height = arg
-                 elif argc == 3:
-                     self.x = arg
-                 elif argc == 4:
-                     self.y = arg
-                 argc += 1
+                if argc == 0:
+                    if arg is None:
+                        self.__init__(self.width, self.height, self.x, self.y)
+                    else:
+                        self.id = arg
+                elif argc == 1:
+                    self.width = arg
+                elif argc == 2:
+                    self.__height = arg
+                elif argc == 3:
+                    self.x = arg
+                elif argc == 4:
+                    self.y = arg
+                argc += 1
         elif kwargs and len(kwargs) != 0:
             for k, v in kwargs.items():
                 if k == "id":
