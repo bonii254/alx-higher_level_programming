@@ -5,7 +5,10 @@ class Square extends Rectangle {
     super(size, size);
   }
 
-  charPrint (c = 'X') {
+  charPrint (c) {
+    if (c === undefined) {
+      c = 'x';
+    }
     const siz = this.height;
     for (let i = 0; i < siz; i++) {
       let row = '';
